@@ -41,11 +41,6 @@ blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
-  margin: 0;
-  padding: 0;
-  grid-column: 2 / span 9;
-  margin-bottom: var(--spacing);
-  overflow: hidden;
 }
 
 canvas {
@@ -69,6 +64,14 @@ section {
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: var(--spacing);
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+  overflow: hidden;
 }
 
 blockquote p {
