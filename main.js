@@ -1,7 +1,8 @@
-import "./style.css";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-
+import cubeTextureImage from "./cubeTexture.jpg";
+import moonImage from "./moon.jpg";
+import spaceImage from "./space.jpg";
+import "./style.css";
 /**
  * We will require 3 this to setup
  * 1. scene/container: consists of object, camera, lighting etc.
@@ -74,12 +75,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load("space.jpg");
+const spaceTexture = new THREE.TextureLoader().load(spaceImage);
 scene.background = spaceTexture;
 
 // Avatar
 
-const cubeTexture = new THREE.TextureLoader().load("cubeTexture.jpg");
+const cubeTexture = new THREE.TextureLoader().load(cubeTextureImage);
 
 const cube = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
@@ -90,8 +91,8 @@ scene.add(cube);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load("moon.jpg");
-const normalTexture = new THREE.TextureLoader().load("normal.jpg");
+const moonTexture = new THREE.TextureLoader().load(moonImage);
+const normalTexture = new THREE.TextureLoader().load(moonImage);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
